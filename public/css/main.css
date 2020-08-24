@@ -86,7 +86,13 @@ input[type="text"]{
 }
 
 .button{
-    
+    border: 1px solid black;
+    border-radius: 3px;
+    width: 150px;
+    height: 40px;
+    line-height: 20px;
+    text-align: center;
+    background-color: lightgreen;
 }
 /**/
 
@@ -96,6 +102,7 @@ body {
     background-color: #aaaaaa;
     padding-left: 50px;
     padding-right: 50px;
+    background-image: url("/images/background_11.jpg");
 }
 /*шапка*/
 header {
@@ -169,18 +176,13 @@ header {
 /*конец шапки*/
 /*содержимое*/
 .container {
-    padding: 50px 0px;
+    padding: 70px 0px;
     min-height: 80vh;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    align-items: center;
+    align-items: baseline;
     justify-content: space-between;
-}
-
-#mainCounters,#mainInput,#mainJournal,#mainOwner,#mainRequest,#comment{
-    border: 1px solid black;
-
 }
 
 #mainCounters{

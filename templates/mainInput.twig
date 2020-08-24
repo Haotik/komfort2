@@ -1,19 +1,23 @@
 <span>
     <select name="osnovanie">
+        <option value="переменная">переменная</option>
         <option value=""></option>
-        <option value="Телефон">Телефон</option>
-        <option value="Телефон">Телефон</option>
-        <option value="Телефон">Телефон</option>
-        <option value="Телефон">Телефон</option>
-        <option value="Телефон">Телефон</option>
-        <option value="Телефон">Телефон</option>
+        <option value="Сайт">Сайт</option>
+        <option value="Акт осмотра приборов учета">Акт осмотра</option>
+        <option value="Акт замены приборов учета">Акт замены</option>
+        <option value="Лично">Лично</option>
+        <option value="Инвентаризация">Инвентаризация</option>
+        <option value="ГИС ЖКХ">ГИС ЖКХ</option>
+        <option value="Исправление ошибки ввода">Ошибка ввода</option>
     </select>
 от <input type="text" name="date" value="дата"> <br>
 Ф.И.О. <input type="text" name="FIO" value="Имя">
 Телефон <input type="text" name="phone" value="Телефон">
 Кто внес <input type="text" name="autor" value="Автор">
 <br>
+    <input type="submit" value="Внести показания" class="button">
+    <input type="hidden" name="inputFlag" value="true">
+    <input type="hidden" name="flat" value="flat">
+    <input type="hidden" name="house" value="house">
 </span>
-<input type="submit" value="Внести показания">
-<input type="hidden" name="inputFlag" value="true">
 </form>
