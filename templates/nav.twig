@@ -1,0 +1,48 @@
+<div class="header_left">
+    <form action="index.php" method="post">
+        Дом <select name="house" class="house">
+                <option>{{ house }}</option>
+                <option>Ленина 59</option>
+                <option>Ленина 59-2</option>
+                <option>Ленина 61</option>
+                <option>Ленина 63</option>
+                <option>Ленина 63-2</option>
+                <option>Ленина 65</option>
+                <option>Ленина 65-2</option>
+                <option>Ленина 65-3</option>
+                <option>Ленина 67</option>
+                <option>Ленина 67-1</option>
+                <option>Ленина 69</option>
+                <option>Ленина 69-2</option>
+                <option>Ленина 69-3</option>
+                <option>Ленина 71</option>
+                <option>Ленина 71-2</option>
+                <option>Ленина 73</option>
+                <option>Ленина 73-2</option>
+                <option>Ленина 75</option>
+                <option>Ленина 77</option>
+                <option>Ленина 77-2</option>
+                <option>Ленина 79</option>
+                <option>Всесвятская 2</option>
+                <option>Всесвятская 4</option>
+                <option>Всесвятская 4-2</option>
+                <option>Всесвятская 4-3</option>
+                <option>Всесвятская 6</option>
+                <option>Всесвятская 8</option>
+                <option>Батова 2</option>
+                <option>Батова 4</option>
+                <option>Батова 6</option>
+            </select> <br>
+        Кв. <input type="text" name="kv" id="flat" value={{ flat }}> <br>
+        <input type="submit" value="Найти">
+        <label><input name = "check" type = "radio" value = "norm" {{ check1 }}>обычный режим </label> <br>
+        <label><input name = "check" type = "radio" value = "apply" {{ check2 }}>режим проверки </label> <br>
+    </form>
+</div>
+<div class="header_nav">
+  <a href="#" class="header_nav_item">Внести показания</a>
+  <a href="#" class="header_nav_item">Архив показаний</a>
+  <a href="#" class="header_nav_item">Журнал записи</a>
+  <a href="#" class="header_nav_item">Заявки</a>
+  <a href="#" class="header_nav_item">Офисы</a>
+</div>
