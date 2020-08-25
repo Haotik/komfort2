@@ -1,0 +1,180 @@
+<?php		
+//$this->flat = $_POST['flat']		
+$this->ipAddres = "192.168.1.24";
+
+if ($this->flat>0 && $this->flat<16){$this->rsNum = "60";}
+elseif (($this->flat>15 && $this->flat<31)) {$this->rsNum = "61";}
+elseif (($this->flat>30 && $this->flat<51)) {$this->rsNum = "62";}
+elseif (($this->flat>50 && $this->flat<69)) {$this->rsNum = "63";}
+elseif (($this->flat>68 && $this->flat<87)) {$this->rsNum = "64";}
+elseif (($this->flat>86 && $this->flat<111)) {$this->rsNum = "65";}
+elseif (($this->flat>110 && $this->flat<127)) {$this->rsNum = "66";}
+elseif (($this->flat>126 && $this->flat<141)) {$this->rsNum = "67";}
+elseif (($this->flat>140 && $this->flat<161)) {$this->rsNum = "68";}
+
+switch ($this->flat) {		
+case"1":$this->sensors = array("BTS2_VD0_1200126","ХВС","BTS2_VD1_1200126","ГВС","BTS2_VD2_1200126","ХВС2","BTS2_VD3_1200126","ГВС2","MRC2_18424988");	$this->chanals= array(0,1,1,1,2,1,3,1);	 break;
+case"2":$this->sensors = array("BTS2_VD4_1200126","ХВС","BTS2_VD5_1200126","ГВС","0","ХВС2","0","ГВС2","MRC2_18424959");	$this->chanals= array(4,1,5,1);	 break;
+case"3":$this->sensors = array("BTS2_VD6_1200126","ХВС","BTS2_VD7_1200126","ГВС","0","ХВС2","0","ГВС2","MRC2_18424996");	$this->chanals= array(6,1,7,1);	 break;
+case"4":$this->sensors = array("BTS2_VD0_1300560","ХВС","BTS2_VD1_1300560","ГВС","0","ХВС2","0","ГВС2","MRC2_18424940");	$this->chanals= array(0,2,1,2);	 break;
+case"5":$this->sensors = array("BTS2_VD2_1300560","ХВС","BTS2_VD3_1300560","ГВС","BTS2_VD4_1300560","ХВС2","BTS2_VD5_1300560","ГВС2","MRC2_18424946");	$this->chanals= array(2,2,3,2,4,2,5,2);	 break;
+case"6":$this->sensors = array("BTS2_VD6_1300560","ХВС","BTS2_VD7_1300560","ГВС","BTS2_VD0_1400042","ХВС2","BTS2_VD1_1400042","ГВС2","MRC2_18424939");	$this->chanals= array(6,2,7,2,0,3,1,3);	 break;
+case"7":$this->sensors = array("BTS2_VD2_1400042","ХВС","BTS2_VD3_1400042","ГВС","0","ХВС2","0","ГВС2","MRC2_18424960");	$this->chanals= array(2,3,3,3);	 break;
+case"8":$this->sensors = array("BTS2_VD4_1400042","ХВС","BTS2_VD5_1400042","ГВС","0","ХВС2","0","ГВС2","MRC2_18424662");	$this->chanals= array(4,3,5,3);	 break;
+case"9":$this->sensors = array("BTS2_VD6_1400042","ХВС","BTS2_VD7_1400042","ГВС","0","ХВС2","0","ГВС2","MRC2_18424955");	$this->chanals= array(6,3,7,3);	 break;
+case"10":$this->sensors = array("BTS2_VD0_1200310","ХВС","BTS2_VD1_1200310","ГВС","BTS2_VD2_1200310","ХВС2","BTS2_VD3_1200310","ГВС2","MRC2_18424984");	$this->chanals= array(0,4,1,4,2,4,3,4);	 break;
+case"11":$this->sensors = array("BTS2_VD4_1200310","ХВС","BTS2_VD5_1200310","ГВС","BTS2_VD6_1200310","ХВС2","BTS2_VD7_1200310","ГВС2","MRC2_18424975");	$this->chanals= array(4,4,5,4,6,4,7,4);	 break;
+case"12":$this->sensors = array("BTS2_VD0_1200101","ХВС","BTS2_VD1_1200101","ГВС","0","ХВС2","0","ГВС2","MRC2_18424999");	$this->chanals= array(0,5,1,5);	 break;
+case"13":$this->sensors = array("BTS2_VD2_1200101","ХВС","BTS2_VD3_1200101","ГВС","0","ХВС2","0","ГВС2","MRC2_18425180");	$this->chanals= array(2,5,3,5);	 break;
+case"14":$this->sensors = array("BTS2_VD4_1200101","ХВС","BTS2_VD5_1200101","ГВС","0","ХВС2","0","ГВС2","MRC2_18425179");	$this->chanals= array(4,5,5,5);	 break;
+case"15":$this->sensors = array("BTS2_VD0_1200217","ХВС","BTS2_VD1_1200217","ГВС","BTS2_VD2_1200217","ХВС2","BTS2_VD3_1200217","ГВС2","MRC2_18425275");	$this->chanals= array(0,6,1,6,2,6,3,6);	 break;
+case"16":$this->sensors = array("BTS2_VD0_1300579","ХВС","BTS2_VD1_1300579","ГВС","BTS2_VD2_1300579","ХВС2","BTS2_VD3_1300579","ГВС2","MRC2_18425277");	$this->chanals= array(0,7,1,7,2,7,3,7);	 break;
+case"17":$this->sensors = array("BTS2_VD4_1300579","ХВС","BTS2_VD5_1300579","ГВС","0","ХВС2","0","ГВС2","MRC2_18425164");	$this->chanals= array(4,7,5,7);	 break;
+case"18":$this->sensors = array("BTS2_VD6_1300579","ХВС","BTS2_VD7_1300579","ГВС","0","ХВС2","0","ГВС2","MRC2_18425254");	$this->chanals= array(6,7,7,7);	 break;
+case"19":$this->sensors = array("BTS2_VD0_1200271","ХВС","BTS2_VD1_1200271","ГВС","0","ХВС2","0","ГВС2","MRC2_18425169");	$this->chanals= array(0,8,1,8);	 break;
+case"20":$this->sensors = array("BTS2_VD2_1200271","ХВС","BTS2_VD3_1200271","ГВС","BTS2_VD4_1200271","ХВС2","BTS2_VD5_1200271","ГВС2","MRC2_18425260");	$this->chanals= array(2,8,3,8,4,8,5,8);	 break;
+case"21":$this->sensors = array("BTS2_VD6_1200271","ХВС","BTS2_VD7_1200271","ГВС","BTS2_VD0_1200216","ХВС2","BTS2_VD1_1200216","ГВС2","MRC2_18425247");	$this->chanals= array(6,8,7,8,0,9,1,9);	 break;
+case"22":$this->sensors = array("BTS2_VD2_1200216","ХВС","BTS2_VD3_1200216","ГВС","0","ХВС2","0","ГВС2","MRC2_18425248");	$this->chanals= array(2,9,3,9);	 break;
+case"23":$this->sensors = array("BTS2_VD4_1200216","ХВС","BTS2_VD5_1200216","ГВС","0","ХВС2","0","ГВС2","MRC2_18425258");	$this->chanals= array(4,9,5,9);	 break;
+case"24":$this->sensors = array("BTS2_VD6_1200216","ХВС","BTS2_VD7_1200216","ГВС","0","ХВС2","0","ГВС2","MRC2_18425251");	$this->chanals= array(6,9,7,9);	 break;
+case"25":$this->sensors = array("BTS2_VD0_1200081","ХВС","BTS2_VD1_1200081","ГВС","BTS2_VD2_1200081","ХВС2","BTS2_VD3_1200081","ГВС2","MRC2_18425287");	$this->chanals= array(0,10,1,10,2,10,3,10);	 break;
+case"26":$this->sensors = array("BTS2_VD4_1200081","ХВС","BTS2_VD5_1200081","ГВС","BTS2_VD6_1200081","ХВС2","BTS2_VD7_1200081","ГВС2","MRC2_18425214");	$this->chanals= array(4,10,5,10,6,10,7,10);	 break;
+case"27":$this->sensors = array("BTS2_VD0_1200233","ХВС","BTS2_VD1_1200233","ГВС","0","ХВС2","0","ГВС2","MRC2_18425226");	$this->chanals= array(0,11,1,11);	 break;
+case"28":$this->sensors = array("BTS2_VD2_1200233","ХВС","BTS2_VD3_1200233","ГВС","0","ХВС2","0","ГВС2","MRC2_18425225");	$this->chanals= array(2,11,3,11);	 break;
+case"29":$this->sensors = array("BTS2_VD4_1200233","ХВС","BTS2_VD5_1200233","ГВС","0","ХВС2","0","ГВС2","MRC2_18425273");	$this->chanals= array(4,11,5,11);	 break;
+case"30":$this->sensors = array("BTS2_VD0_1200061","ХВС","BTS2_VD1_1200061","ГВС","BTS2_VD2_1200061","ХВС2","BTS2_VD3_1200061","ГВС2","MRC2_18425293");	$this->chanals= array(0,12,1,12,2,12,3,12);	 break;
+case"31":$this->sensors = array("BTS2_VD0_1200047","ХВС","BTS2_VD1_1200047","ГВС","BTS2_VD2_1200047","ХВС2","BTS2_VD3_1200047","ГВС2","MRC2_18425288");	$this->chanals= array(0,13,1,13,2,13,3,13);	 break;
+case"32":$this->sensors = array("BTS2_VD4_1200047","ХВС","BTS2_VD5_1200047","ГВС","0","ХВС2","0","ГВС2","MRC2_18425227");	$this->chanals= array(4,13,5,13);	 break;
+case"33":$this->sensors = array("BTS2_VD6_1200047","ХВС","BTS2_VD7_1200047","ГВС","0","ХВС2","0","ГВС2","MRC2_18425292");	$this->chanals= array(6,13,7,13);	 break;
+case"34":$this->sensors = array("BTS2_VD0_9900039","ХВС","BTS2_VD1_9900039","ГВС","0","ХВС2","0","ГВС2","MRC2_18425282");	$this->chanals= array(0,14,1,14);	 break;
+case"35":$this->sensors = array("BTS2_VD2_9900039","ХВС","BTS2_VD3_9900039","ГВС","BTS2_VD4_9900039","ХВС2","BTS2_VD5_9900039","ГВС2","MRC2_18425218");	$this->chanals= array(2,14,3,14,4,14,5,14);	 break;
+case"36":$this->sensors = array("BTS2_VD6_9900039","ХВС","BTS2_VD7_9900039","ГВС","BTS2_VD0_1200239","ХВС2","BTS2_VD1_1200239","ГВС2","MRC2_18425210");	$this->chanals= array(6,14,7,14,0,15,1,15);	 break;
+case"37":$this->sensors = array("BTS2_VD2_1200239","ХВС","BTS2_VD3_1200239","ГВС","0","ХВС2","0","ГВС2","MRC2_18425133");	$this->chanals= array(2,15,3,15);	 break;
+case"38":$this->sensors = array("BTS2_VD4_1200239","ХВС","BTS2_VD5_1200239","ГВС","0","ХВС2","0","ГВС2","MRC2_18425427");	$this->chanals= array(4,15,5,15);	 break;
+case"39":$this->sensors = array("BTS2_VD6_1200239","ХВС","BTS2_VD7_1200239","ГВС","0","ХВС2","0","ГВС2","MRC2_18425377");	$this->chanals= array(6,15,7,15);	 break;
+case"40":$this->sensors = array("BTS2_VD0_1200294","ХВС","BTS2_VD1_1200294","ГВС","BTS2_VD2_1200294","ХВС2","BTS2_VD3_1200294","ГВС2","MRC2_18425375");	$this->chanals= array(0,16,1,16,2,16,3,16);	 break;
+case"41":$this->sensors = array("BTS2_VD4_1200294","ХВС","BTS2_VD5_1200294","ГВС","BTS2_VD6_1200294","ХВС2","BTS2_VD7_1200294","ГВС2","MRC2_18425376");	$this->chanals= array(4,16,5,16,6,16,7,16);	 break;
+case"42":$this->sensors = array("BTS2_VD0_1400027","ХВС","BTS2_VD1_1400027","ГВС","0","ХВС2","0","ГВС2","MRC2_18425348");	$this->chanals= array(0,17,1,17);	 break;
+case"43":$this->sensors = array("BTS2_VD2_1400027","ХВС","BTS2_VD3_1400027","ГВС","0","ХВС2","0","ГВС2","MRC2_18425343");	$this->chanals= array(2,17,3,17);	 break;
+case"44":$this->sensors = array("BTS2_VD4_1400027","ХВС","BTS2_VD5_1400027","ГВС","0","ХВС2","0","ГВС2","MRC2_18425124");	$this->chanals= array(4,17,5,17);	 break;
+case"45":$this->sensors = array("BTS2_VD6_1400027","ХВС","BTS2_VD7_1400027","ГВС","BTS2_VD0_1400017","ХВС2","BTS2_VD1_1400017","ГВС2","MRC2_18424976");	$this->chanals= array(6,17,7,17,0,18,1,18);	 break;
+case"46":$this->sensors = array("BTS2_VD2_1400017","ХВС","BTS2_VD3_1400017","ГВС","BTS2_VD4_1400017","ХВС2","BTS2_VD5_1400017","ГВС2","MRC2_18424958");	$this->chanals= array(2,18,3,18,4,18,5,18);	 break;
+case"47":$this->sensors = array("BTS2_VD6_1400017","ХВС","BTS2_VD7_1400017","ГВС","0","ХВС2","0","ГВС2","MRC2_18424658");	$this->chanals= array(6,18,7,18);	 break;
+case"48":$this->sensors = array("BTS2_VD0_1200146","ХВС","BTS2_VD1_1200146","ГВС","0","ХВС2","0","ГВС2","MRC2_18425407");	$this->chanals= array(0,19,1,19);	 break;
+case"49":$this->sensors = array("BTS2_VD2_1200146","ХВС","BTS2_VD3_1200146","ГВС","0","ХВС2","0","ГВС2","MRC2_18425392");	$this->chanals= array(2,19,3,19);	 break;
+case"50":$this->sensors = array("BTS2_VD4_1200146","ХВС","BTS2_VD5_1200146","ГВС","BTS2_VD6_1200146","ХВС2","BTS2_VD7_1200146","ГВС2","MRC2_18425057");	$this->chanals= array(4,19,5,19,6,19,7,19);	 break;
+case"51":$this->sensors = array("BTS2_VD0_1400046","ХВС","BTS2_VD1_1400046","ГВС","BTS2_VD2_1400046","ХВС2","BTS2_VD3_1400046","ГВС2","MRC2_18425415");	$this->chanals= array(0,20,1,20,2,20,3,20);	 break;
+case"52":$this->sensors = array("BTS2_VD4_1400046","ХВС","BTS2_VD5_1400046","ГВС","0","ХВС2","0","ГВС2","MRC2_18425352");	$this->chanals= array(4,20,5,20);	 break;
+case"53":$this->sensors = array("BTS2_VD6_1400046","ХВС","BTS2_VD7_1400046","ГВС","0","ХВС2","0","ГВС2","MRC2_18425354");	$this->chanals= array(6,20,7,20);	 break;
+case"54":$this->sensors = array("BTS2_VD0_1200108","ХВС","BTS2_VD1_1200108","ГВС","0","ХВС2","0","ГВС2","MRC2_18425110");	$this->chanals= array(0,21,1,21);	 break;
+case"55":$this->sensors = array("BTS2_VD2_1200108","ХВС","BTS2_VD3_1200108","ГВС","0","ХВС2","0","ГВС2","MRC2_18425355");	$this->chanals= array(2,21,3,21);	 break;
+case"56":$this->sensors = array("BTS2_VD4_1200108","ХВС","BTS2_VD5_1200108","ГВС","0","ХВС2","0","ГВС2","MRC2_18425420");	$this->chanals= array(4,21,5,21);	 break;
+case"57":$this->sensors = array("BTS2_VD6_1200108","ХВС","BTS2_VD7_1200108","ГВС","BTS2_VD0_1300627","ХВС2","BTS2_VD1_1300627","ГВС2","MRC2_18425421");	$this->chanals= array(6,21,7,21,0,22,1,22);	 break;
+case"58":$this->sensors = array("BTS2_VD2_1300627","ХВС","BTS2_VD3_1300627","ГВС","0","ХВС2","0","ГВС2","MRC2_18425378");	$this->chanals= array(2,22,3,22);	 break;
+case"59":$this->sensors = array("BTS2_VD4_1300627","ХВС","BTS2_VD5_1300627","ГВС","0","ХВС2","0","ГВС2","MRC2_18425403");	$this->chanals= array(4,22,5,22);	 break;
+case"60":$this->sensors = array("BTS2_VD6_1300627","ХВС","BTS2_VD7_1300627","ГВС","0","ХВС2","0","ГВС2","MRC2_18425390");	$this->chanals= array(6,22,7,22);	 break;
+case"61":$this->sensors = array("BTS2_VD0_1400032","ХВС","BTS2_VD1_1400032","ГВС","0","ХВС2","0","ГВС2","MRC2_18425222");	$this->chanals= array(0,23,1,23);	 break;
+case"62":$this->sensors = array("BTS2_VD2_1400032","ХВС","BTS2_VD3_1400032","ГВС","0","ХВС2","0","ГВС2","MRC2_18424862");	$this->chanals= array(2,23,3,23);	 break;
+case"63":$this->sensors = array("BTS2_VD4_1400032","ХВС","BTS2_VD5_1400032","ГВС","BTS2_VD6_1400032","ХВС2","BTS2_VD7_1400032","ГВС2","MRC2_18424889");	$this->chanals= array(4,23,5,23,6,23,7,23);	 break;
+case"64":$this->sensors = array("BTS2_VD0_1300034","ХВС","BTS2_VD1_1300034","ГВС","0","ХВС2","0","ГВС2","MRC2_18424876");	$this->chanals= array(0,24,1,24);	 break;
+case"65":$this->sensors = array("BTS2_VD2_1300034","ХВС","BTS2_VD3_1300034","ГВС","0","ХВС2","0","ГВС2","MRC2_18424929");	$this->chanals= array(2,24,3,24);	 break;
+case"66":$this->sensors = array("BTS2_VD4_1300034","ХВС","BTS2_VD5_1300034","ГВС","0","ХВС2","0","ГВС2","MRC2_18424930");	$this->chanals= array(4,24,5,24);	 break;
+case"67":$this->sensors = array("BTS2_VD6_1300034","ХВС","BTS2_VD7_1300034","ГВС","0","ХВС2","0","ГВС2","MRC2_18424893");	$this->chanals= array(6,24,7,24);	 break;
+case"68":$this->sensors = array("BTS2_VD0_1200073","ХВС","BTS2_VD1_1200073","ГВС","0","ХВС2","0","ГВС2","MRC2_18424894");	$this->chanals= array(0,25,1,25);	 break;
+case"69":$this->sensors = array("BTS2_VD0_1200133","ХВС","BTS2_VD1_1200133","ГВС","BTS2_VD2_1200133","ХВС2","BTS2_VD3_1200133","ГВС2","MRC2_18425150");	$this->chanals= array(0,26,1,26,2,26,3,26);	 break;
+case"70":$this->sensors = array("BTS2_VD4_1200133","ХВС","BTS2_VD5_1200133","ГВС","0","ХВС2","0","ГВС2","MRC2_18424654");	$this->chanals= array(4,26,5,26);	 break;
+case"71":$this->sensors = array("BTS2_VD6_1200133","ХВС","BTS2_VD7_1200133","ГВС","0","ХВС2","0","ГВС2","MRC2_18424878");	$this->chanals= array(6,26,7,26);	 break;
+case"72":$this->sensors = array("BTS2_VD0_1200093","ХВС","BTS2_VD1_1200093","ГВС","0","ХВС2","0","ГВС2","MRC2_18424925");	$this->chanals= array(0,27,1,27);	 break;
+case"73":$this->sensors = array("BTS2_VD2_1200093","ХВС","BTS2_VD3_1200093","ГВС","0","ХВС2","0","ГВС2","MRC2_18425388");	$this->chanals= array(2,27,3,27);	 break;
+case"74":$this->sensors = array("BTS2_VD4_1200093","ХВС","BTS2_VD5_1200093","ГВС","0","ХВС2","0","ГВС2","MRC2_18425123");	$this->chanals= array(4,27,5,27);	 break;
+case"75":$this->sensors = array("BTS2_VD6_1200093","ХВС","BTS2_VD7_1200093","ГВС","BTS2_VD0_1200148","ХВС2","BTS2_VD1_1200148","ГВС2","MRC2_18425117");	$this->chanals= array(6,27,7,27,0,28,1,28);	 break;
+case"76":$this->sensors = array("BTS2_VD2_1200148","ХВС","BTS2_VD3_1200148","ГВС","0","ХВС2","0","ГВС2","MRC2_18425136");	$this->chanals= array(2,28,3,28);	 break;
+case"77":$this->sensors = array("BTS2_VD4_1200148","ХВС","BTS2_VD5_1200148","ГВС","0","ХВС2","0","ГВС2","MRC2_18425135");	$this->chanals= array(4,28,5,28);	 break;
+case"78":$this->sensors = array("BTS2_VD6_1200148","ХВС","BTS2_VD7_1200148","ГВС","0","ХВС2","0","ГВС2","MRC2_18425379");	$this->chanals= array(6,28,7,28);	 break;
+case"79":$this->sensors = array("BTS2_VD0_1400016","ХВС","BTS2_VD1_1400016","ГВС","0","ХВС2","0","ГВС2","MRC2_18425384");	$this->chanals= array(0,29,1,29);	 break;
+case"80":$this->sensors = array("BTS2_VD2_1400016","ХВС","BTS2_VD3_1400016","ГВС","0","ХВС2","0","ГВС2","MRC2_18425096");	$this->chanals= array(2,29,3,29);	 break;
+case"81":$this->sensors = array("BTS2_VD4_1400016","ХВС","BTS2_VD5_1400016","ГВС","BTS2_VD6_1400016","ХВС2","BTS2_VD7_1400016","ГВС2","MRC2_18425391");	$this->chanals= array(4,29,5,29,6,29,7,29);	 break;
+case"82":$this->sensors = array("BTS2_VD0_1200048","ХВС","BTS2_VD1_1200048","ГВС","0","ХВС2","0","ГВС2","MRC2_18425114");	$this->chanals= array(0,30,1,30);	 break;
+case"83":$this->sensors = array("BTS2_VD2_1200048","ХВС","BTS2_VD3_1200048","ГВС","0","ХВС2","0","ГВС2","MRC2_18425341");	$this->chanals= array(2,30,3,30);	 break;
+case"84":$this->sensors = array("BTS2_VD4_1200048","ХВС","BTS2_VD5_1200048","ГВС","0","ХВС2","0","ГВС2","MRC2_18425116");	$this->chanals= array(4,30,5,30);	 break;
+case"85":$this->sensors = array("BTS2_VD6_1200048","ХВС","BTS2_VD7_1200048","ГВС","0","ХВС2","0","ГВС2","MRC2_18425257");	$this->chanals= array(6,30,7,30);	 break;
+case"86":$this->sensors = array("BTS2_VD0_1200009","ХВС","BTS2_VD1_1200009","ГВС","0","ХВС2","0","ГВС2","MRC2_18425253");	$this->chanals= array(0,31,1,31);	 break;
+case"87":$this->sensors = array("BTS2_VD0_1400013","ХВС","BTS2_VD1_1400013","ГВС","BTS2_VD2_1400013","ХВС2","BTS2_VD3_1400013","ГВС2","MRC2_18425242");	$this->chanals= array(0,32,1,32,2,32,3,32);	 break;
+case"88":$this->sensors = array("BTS2_VD4_1400013","ХВС","BTS2_VD5_1400013","ГВС","0","ХВС2","0","ГВС2","MRC2_18425268");	$this->chanals= array(4,32,5,32);	 break;
+case"89":$this->sensors = array("BTS2_VD6_1400013","ХВС","BTS2_VD7_1400013","ГВС","0","ХВС2","0","ГВС2","MRC2_18425252");	$this->chanals= array(6,32,7,32);	 break;
+case"90":$this->sensors = array("BTS2_VD0_1400008","ХВС","BTS2_VD1_1400008","ГВС","0","ХВС2","0","ГВС2","MRC2_18425294");	$this->chanals= array(0,33,1,33);	 break;
+case"91":$this->sensors = array("BTS2_VD2_1400008","ХВС","BTS2_VD3_1400008","ГВС","0","ХВС2","0","ГВС2","MRC2_18425255");	$this->chanals= array(2,33,3,33);	 break;
+case"92":$this->sensors = array("BTS2_VD4_1400008","ХВС","BTS2_VD5_1400008","ГВС","0","ХВС2","0","ГВС2","MRC2_18425239");	$this->chanals= array(4,33,5,33);	 break;
+case"93":$this->sensors = array("BTS2_VD6_1400008","ХВС","BTS2_VD7_1400008","ГВС","BTS2_VD0_1400004","ХВС2","BTS2_VD1_1400004","ГВС2","MRC2_18425266");	$this->chanals= array(6,33,7,33,0,34,1,34);	 break;
+case"94":$this->sensors = array("BTS2_VD2_1400004","ХВС","BTS2_VD3_1400004","ГВС","0","ХВС2","0","ГВС2","MRC2_18425262");	$this->chanals= array(2,34,3,34);	 break;
+case"95":$this->sensors = array("BTS2_VD4_1400004","ХВС","BTS2_VD5_1400004","ГВС","0","ХВС2","0","ГВС2","MRC2_18425261");	$this->chanals= array(4,34,5,34);	 break;
+case"96":$this->sensors = array("BTS2_VD6_1400004","ХВС","BTS2_VD7_1400004","ГВС","0","ХВС2","0","ГВС2","MRC2_18425264");	$this->chanals= array(6,34,7,34);	 break;
+case"97":$this->sensors = array("BTS2_VD0_1400043","ХВС","BTS2_VD1_1400043","ГВС","0","ХВС2","0","ГВС2","MRC2_18425144");	$this->chanals= array(0,35,1,35);	 break;
+case"98":$this->sensors = array("BTS2_VD2_1400043","ХВС","BTS2_VD3_1400043","ГВС","0","ХВС2","0","ГВС2","MRC2_18425141");	$this->chanals= array(2,35,3,35);	 break;
+case"99":$this->sensors = array("BTS2_VD4_1400043","ХВС","BTS2_VD5_1400043","ГВС","BTS2_VD6_1400043","ХВС2","BTS2_VD7_1400043","ГВС2","MRC2_18425291");	$this->chanals= array(4,35,5,35,6,35,7,35);	 break;
+case"100":$this->sensors = array("BTS2_VD0_1200364","ХВС","BTS2_VD1_1200364","ГВС","0","ХВС2","0","ГВС2","MRC2_18425228");	$this->chanals= array(0,36,1,36);	 break;
+case"101":$this->sensors = array("BTS2_VD2_1200364","ХВС","BTS2_VD3_1200364","ГВС","0","ХВС2","0","ГВС2","MRC2_18425290");	$this->chanals= array(2,36,3,36);	 break;
+case"102":$this->sensors = array("BTS2_VD4_1200364","ХВС","BTS2_VD5_1200364","ГВС","0","ХВС2","0","ГВС2","MRC2_18425224");	$this->chanals= array(4,36,5,36);	 break;
+case"103":$this->sensors = array("BTS2_VD6_1200364","ХВС","BTS2_VD7_1200364","ГВС","0","ХВС2","0","ГВС2","MRC2_18425147");	$this->chanals= array(6,36,7,36);	 break;
+case"104":$this->sensors = array("BTS2_VD0_1200203","ХВС","BTS2_VD1_1200203","ГВС","0","ХВС2","0","ГВС2","MRC2_18425269");	$this->chanals= array(0,37,1,37);	 break;
+case"105":$this->sensors = array("BTS2_VD2_1200203","ХВС","BTS2_VD3_1200203","ГВС","BTS2_VD4_1200203","ХВС2","BTS2_VD5_1200203","ГВС2","MRC2_18425142");	$this->chanals= array(2,37,3,37,4,37,5,37);	 break;
+case"106":$this->sensors = array("BTS2_VD6_1200203","ХВС","BTS2_VD7_1200203","ГВС","0","ХВС2","0","ГВС2","MRC2_18425280");	$this->chanals= array(6,37,7,37);	 break;
+case"107":$this->sensors = array("BTS2_VD0_1400048","ХВС","BTS2_VD1_1400048","ГВС","0","ХВС2","0","ГВС2","MRC2_18425149");	$this->chanals= array(0,38,1,38);	 break;
+case"108":$this->sensors = array("BTS2_VD2_1400048","ХВС","BTS2_VD3_1400048","ГВС","0","ХВС2","0","ГВС2","MRC2_18425183");	$this->chanals= array(2,38,3,38);	 break;
+case"109":$this->sensors = array("BTS2_VD4_1400048","ХВС","BTS2_VD5_1400048","ГВС","0","ХВС2","0","ГВС2","MRC2_18425249");	$this->chanals= array(4,38,5,38);	 break;
+case"110":$this->sensors = array("BTS2_VD6_1400048","ХВС","BTS2_VD7_1400048","ГВС","0","ХВС2","0","ГВС2","MRC2_18425245");	$this->chanals= array(6,38,7,38);	 break;
+case"111":$this->sensors = array("BTS2_VD0_1400049","ХВС","BTS2_VD1_1400049","ГВС","BTS2_VD2_1400049","ХВС2","BTS2_VD3_1400049","ГВС2","MRC2_18425270");	$this->chanals= array(0,39,1,39,2,39,3,39);	 break;
+case"112":$this->sensors = array("BTS2_VD4_1400049","ХВС","BTS2_VD5_1400049","ГВС","0","ХВС2","0","ГВС2","MRC2_18425246");	$this->chanals= array(4,39,5,39);	 break;
+case"113":$this->sensors = array("BTS2_VD6_1400049","ХВС","BTS2_VD7_1400049","ГВС","0","ХВС2","0","ГВС2","MRC2_18425250");	$this->chanals= array(6,39,7,39);	 break;
+case"114":$this->sensors = array("BTS2_VD0_1400014","ХВС","BTS2_VD1_1400014","ГВС","0","ХВС2","0","ГВС2","MRC2_18425263");	$this->chanals= array(0,40,1,40);	 break;
+case"115":$this->sensors = array("BTS2_VD2_1400014","ХВС","BTS2_VD3_1400014","ГВС","BTS2_VD4_1400014","ХВС2","BTS2_VD5_1400014","ГВС2","MRC2_18425387");	$this->chanals= array(2,40,3,40,4,40,5,40);	 break;
+case"116":$this->sensors = array("BTS2_VD6_1400014","ХВС","BTS2_VD7_1400014","ГВС","BTS2_VD0_1400024","ХВС2","BTS2_VD1_1400024","ГВС2","MRC2_18425162");	$this->chanals= array(6,40,7,40,0,41,1,41);	 break;
+case"117":$this->sensors = array("BTS2_VD2_1400024","ХВС","BTS2_VD3_1400024","ГВС","0","ХВС2","0","ГВС2","MRC2_18425229");	$this->chanals= array(2,41,3,41);	 break;
+case"118":$this->sensors = array("BTS2_VD4_1400024","ХВС","BTS2_VD5_1400024","ГВС","0","ХВС2","0","ГВС2","MRC2_18425160");	$this->chanals= array(4,41,5,41);	 break;
+case"119":$this->sensors = array("BTS2_VD6_1400024","ХВС","BTS2_VD7_1400024","ГВС","0","ХВС2","0","ГВС2","MRC2_18425154");	$this->chanals= array(6,41,7,41);	 break;
+case"120":$this->sensors = array("BTS2_VD0_1200024","ХВС","BTS2_VD1_1200024","ГВС","BTS2_VD2_1200024","ХВС2","BTS2_VD3_1200024","ГВС2","MRC2_18425271");	$this->chanals= array(0,42,1,42,2,42,3,42);	 break;
+case"121":$this->sensors = array("BTS2_VD4_1200024","ХВС","BTS2_VD5_1200024","ГВС","BTS2_VD6_1200024","ХВС2","BTS2_VD7_1200024","ГВС2","MRC2_18425367");	$this->chanals= array(4,42,5,42,6,42,7,42);	 break;
+case"122":$this->sensors = array("BTS2_VD0_1400007","ХВС","BTS2_VD1_1400007","ГВС","0","ХВС2","0","ГВС2","MRC2_18424943");	$this->chanals= array(0,43,1,43);	 break;
+case"123":$this->sensors = array("BTS2_VD2_1400007","ХВС","BTS2_VD3_1400007","ГВС","0","ХВС2","0","ГВС2","MRC2_20165469");	$this->chanals= array(2,43,3,43);	 break;
+case"124":$this->sensors = array("BTS2_VD4_1400007","ХВС","BTS2_VD5_1400007","ГВС","0","ХВС2","0","ГВС2","MRC2_18424944");	$this->chanals= array(4,43,5,43);	 break;
+case"125":$this->sensors = array("BTS2_VD0_1400015","ХВС","BTS2_VD1_1400015","ГВС","BTS2_VD2_1400015","ХВС2","BTS2_VD3_1400015","ГВС2","MRC2_18425016");	$this->chanals= array(0,44,1,44,2,44,3,44);	 break;
+case"126":$this->sensors = array("BTS2_VD0_1400026","ХВС","BTS2_VD1_1400026","ГВС","BTS2_VD2_1400026","ХВС2","BTS2_VD3_1400026","ГВС2","MRC2_18425015");	$this->chanals= array(0,45,1,45,2,45,3,45);	 break;
+case"127":$this->sensors = array("BTS2_VD4_1400026","ХВС","BTS2_VD5_1400026","ГВС","0","ХВС2","0","ГВС2","MRC2_18424642");	$this->chanals= array(4,45,5,45);	 break;
+case"128":$this->sensors = array("BTS2_VD6_1400026","ХВС","BTS2_VD7_1400026","ГВС","0","ХВС2","0","ГВС2","MRC2_18425003");	$this->chanals= array(6,45,7,45);	 break;
+case"129":$this->sensors = array("BTS2_VD0_1200084","ХВС","BTS2_VD1_1200084","ГВС","0","ХВС2","0","ГВС2","MRC2_18425005");	$this->chanals= array(0,46,1,46);	 break;
+case"130":$this->sensors = array("BTS2_VD2_1200084","ХВС","BTS2_VD3_1200084","ГВС","BTS2_VD4_1200084","ХВС2","BTS2_VD5_1200084","ГВС2","MRC2_18424640");	$this->chanals= array(2,46,3,46,4,46,5,46);	 break;
+case"131":$this->sensors = array("BTS2_VD6_1200084","ХВС","BTS2_VD7_1200084","ГВС","BTS2_VD0_1400021","ХВС2","BTS2_VD1_1400021","ГВС2","MRC2_18424646");	$this->chanals= array(6,46,7,46,0,47,1,47);	 break;
+case"132":$this->sensors = array("BTS2_VD2_1400021","ХВС","BTS2_VD3_1400021","ГВС","0","ХВС2","0","ГВС2","MRC2_18424645");	$this->chanals= array(2,47,3,47);	 break;
+case"133":$this->sensors = array("BTS2_VD4_1400021","ХВС","BTS2_VD5_1400021","ГВС","0","ХВС2","0","ГВС2","MRC2_18424991");	$this->chanals= array(4,47,5,47);	 break;
+case"134":$this->sensors = array("BTS2_VD6_1400021","ХВС","BTS2_VD7_1400021","ГВС","0","ХВС2","0","ГВС2","MRC2_18424951");	$this->chanals= array(6,47,7,47);	 break;
+case"135":$this->sensors = array("BTS2_VD0_1300500","ХВС","BTS2_VD1_1300500","ГВС","BTS2_VD2_1300500","ХВС2","BTS2_VD3_1300500","ГВС2","MRC2_18424962");	$this->chanals= array(0,48,1,48,2,48,3,48);	 break;
+case"136":$this->sensors = array("BTS2_VD4_1300500","ХВС","BTS2_VD5_1300500","ГВС","BTS2_VD6_1300500","ХВС2","BTS2_VD7_1300500","ГВС2","MRC2_18424979");	$this->chanals= array(4,48,5,48,6,48,7,48);	 break;
+case"137":$this->sensors = array("BTS2_VD0_1300615","ХВС","BTS2_VD1_1300615","ГВС","0","ХВС2","0","ГВС2","MRC2_18424941");	$this->chanals= array(0,49,1,49);	 break;
+case"138":$this->sensors = array("BTS2_VD2_1300615","ХВС","BTS2_VD3_1300615","ГВС","0","ХВС2","0","ГВС2","MRC2_18425346");	$this->chanals= array(2,49,3,49);	 break;
+case"139":$this->sensors = array("BTS2_VD4_1300615","ХВС","BTS2_VD5_1300615","ГВС","0","ХВС2","0","ГВС2","MRC2_18424695");	$this->chanals= array(4,49,5,49);	 break;
+case"140":$this->sensors = array("BTS2_VD0_1300412","ХВС","BTS2_VD1_1300412","ГВС","BTS2_VD2_1300412","ХВС2","BTS2_VD3_1300412","ГВС2","MRC2_18424965");	$this->chanals= array(0,50,1,50,2,50,3,50);	 break;
+case"141":$this->sensors = array("BTS2_VD0_1400044","ХВС","BTS2_VD1_1400044","ГВС","BTS2_VD2_1400044","ХВС2","BTS2_VD3_1400044","ГВС2","MRC2_18424953");	$this->chanals= array(0,51,1,51,2,51,3,51);	 break;
+case"142":$this->sensors = array("BTS2_VD4_1400044","ХВС","BTS2_VD5_1400044","ГВС","0","ХВС2","0","ГВС2","MRC2_18424992");	$this->chanals= array(4,51,5,51);	 break;
+case"143":$this->sensors = array("BTS2_VD6_1400044","ХВС","BTS2_VD7_1400044","ГВС","0","ХВС2","0","ГВС2","MRC2_18424966");	$this->chanals= array(6,51,7,51);	 break;
+case"144":$this->sensors = array("BTS2_VD0_1400045","ХВС","BTS2_VD1_1400045","ГВС","0","ХВС2","0","ГВС2","MRC2_18425345");	$this->chanals= array(0,52,1,52);	 break;
+case"145":$this->sensors = array("BTS2_VD2_1400045","ХВС","BTS2_VD3_1400045","ГВС","BTS2_VD4_1400045","ХВС2","BTS2_VD5_1400045","ГВС2","MRC2_18425119");	$this->chanals= array(2,52,3,52,4,52,5,52);	 break;
+case"146":$this->sensors = array("BTS2_VD6_1400045","ХВС","BTS2_VD7_1400045","ГВС","BTS2_VD0_1400019","ХВС2","BTS2_VD1_1400019","ГВС2","MRC2_18425423");	$this->chanals= array(6,52,7,52,0,53,1,53);	 break;
+case"147":$this->sensors = array("BTS2_VD2_1400019","ХВС","BTS2_VD3_1400019","ГВС","0","ХВС2","0","ГВС2","MRC2_18425408");	$this->chanals= array(2,53,3,53);	 break;
+case"148":$this->sensors = array("BTS2_VD4_1400019","ХВС","BTS2_VD5_1400019","ГВС","0","ХВС2","0","ГВС2","MRC2_18425406");	$this->chanals= array(4,53,5,53);	 break;
+case"149":$this->sensors = array("BTS2_VD6_1400019","ХВС","BTS2_VD7_1400019","ГВС","0","ХВС2","0","ГВС2","MRC2_18425113");	$this->chanals= array(6,53,7,53);	 break;
+case"150":$this->sensors = array("BTS2_VD0_1400079","ХВС","BTS2_VD1_1400079","ГВС","BTS2_VD2_1400079","ХВС2","BTS2_VD3_1400079","ГВС2","MRC2_20164911");	$this->chanals= array(0,54,1,54,2,54,3,54);	 break;
+case"151":$this->sensors = array("BTS2_VD4_1400079","ХВС","BTS2_VD5_1400079","ГВС","BTS2_VD6_1400079","ХВС2","BTS2_VD7_1400079","ГВС2","MRC2_18425127");	$this->chanals= array(4,54,5,54,6,54,7,54);	 break;
+case"152":$this->sensors = array("BTS2_VD0_1400070","ХВС","BTS2_VD1_1400070","ГВС","0","ХВС2","0","ГВС2","MRC2_18425131");	$this->chanals= array(0,55,1,55);	 break;
+case"153":$this->sensors = array("BTS2_VD2_1400070","ХВС","BTS2_VD3_1400070","ГВС","0","ХВС2","0","ГВС2","MRC2_18425112");	$this->chanals= array(2,55,3,55);	 break;
+case"154":$this->sensors = array("BTS2_VD4_1400070","ХВС","BTS2_VD5_1400070","ГВС","0","ХВС2","0","ГВС2","MRC2_18425339");	$this->chanals= array(4,55,5,55);	 break;
+case"155":$this->sensors = array("BTS2_VD6_1400070","ХВС","BTS2_VD7_1400070","ГВС","BTS2_VD0_1400020","ХВС2","BTS2_VD1_1400020","ГВС2","MRC2_18425120");	$this->chanals= array(6,55,7,55,0,56,1,56);	 break;
+case"156":$this->sensors = array("BTS2_VD2_1400020","ХВС","BTS2_VD3_1400020","ГВС","BTS2_VD4_1400020","ХВС2","BTS2_VD5_1400020","ГВС2","MRC2_18425126");	$this->chanals= array(2,56,3,56,4,56,5,56);	 break;
+case"157":$this->sensors = array("BTS2_VD6_1400020","ХВС","BTS2_VD7_1400020","ГВС","0","ХВС2","0","ГВС2","MRC2_18425402");	$this->chanals= array(6,56,7,56);	 break;
+case"158":$this->sensors = array("BTS2_VD0_1400029","ХВС","BTS2_VD1_1400029","ГВС","0","ХВС2","0","ГВС2","MRC2_18425424");	$this->chanals= array(0,57,1,57);	 break;
+case"159":$this->sensors = array("BTS2_VD2_1400029","ХВС","BTS2_VD3_1400029","ГВС","0","ХВС2","0","ГВС2","MRC2_18425134");	$this->chanals= array(2,57,3,57);	 break;
+case"160":$this->sensors = array("BTS2_VD4_1400029","ХВС","BTS2_VD5_1400029","ГВС","BTS2_VD6_1400029","ХВС2","BTS2_VD7_1400029","ГВС2","MRC2_18425401");	$this->chanals= array(4,57,5,57,6,57,7,57); 	 break;
+		
+case"Все": break;		
+default: require 'alert_flat.js'; die;		
+}		
+?>

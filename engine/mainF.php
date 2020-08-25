@@ -47,7 +47,7 @@ function myDump($a = "Задайте аргументы для теста"){?>
     <span class="abstract">
 <? $params = func_get_args();
      foreach ($params as $a){
-        if (is_array($a)){
+        if (is_array($a) or is_object($a)){
             foreach($a as $key => $value){?>
                 <details>
                     <summary><?=$key?></summary>

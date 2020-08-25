@@ -1,9 +1,10 @@
+{% autoescape false %}
 <div class="counters" id="mainCounters">
     <form action="#" method="post">
-    {% include 'mainCounters.twig' %}
+    {{ counters }}
 </div>
 <div class="owner" id="mainOwner">
-    {% include 'mainOwner.twig' %}
+    {{ owners }}
 </div>
 <div class="inputForm" id="mainInput">
     {% include 'mainInput.twig' %}
@@ -18,3 +19,4 @@
 <div class="comment" id="comment">
     {% include 'mainComments.twig' %}
 </div>
+{% endautoescape %}

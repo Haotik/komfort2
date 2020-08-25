@@ -2,7 +2,7 @@
 
 require_once '../config/config.php';
 
-$flat = new Flat();
+$kvart = new Flat();
 
 if (checkFlag('flag',"Войти")) {
     $content = $twig -> render('autorisation.twig');
@@ -10,17 +10,20 @@ if (checkFlag('flag',"Войти")) {
 if (checkFlag('flag','Регистрация')) {
     $content = $twig -> render('registration.twig');
 } else {
-    $content = $twig -> render('index.twig');
+    $content = $twig -> render('index.twig',[
+        'counters' => $twig -> render('mainCounters.twig',$kvart->showCounters()),
+        'owners' => $twig->render('mainOwner.twig',$kvart->showOwners())
+    ]);
 }
 
 echo $twig->render('base.twig', [
     'title' => 'Главная',
-    'house' => 'Ленина 59',
-    'flat' => '1',
+    'house' => $kvart->house,
+    'flat' => $kvart->flat,
     'content' => $content,
     'error' => $error,
     'greating' => $greating,
     'login' => $flag,
-    'commentText' => 'Здесь будет комментарий'
+    'commentText' => 'Здесь будет комментарий',
 ]);
 ?>

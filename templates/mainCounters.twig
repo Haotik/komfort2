@@ -1,6 +1,6 @@
 <h4>Счетчики</h4>
 <div class="containerCounter">
-    <div class="counter" style="padding-top: 12px;">
+    <div class="counterTitle" style="padding-top: 12px;">
         <img src="images/pok.png" alt="">
         <img src="images/date.png" alt="">
         <img src="images/sost.png" alt="">
@@ -9,50 +9,50 @@
     </div>
     <div class="counter">
         <h5>ХВС</h5>
-        <span>202</span>
-        <span>date</span>
-        <span>sost</span>
-        <span>now</span>
+        <span class="archive">{{ coldArchive }}</span>
+        <span class="time">{{ coldTime }}</span>
+        <span class="status">{{ coldStatus }}</span>
+        <span>{{ cold }}</span>
         <input type="text" class="counterInput" name="counter1">
     </div>
     <div class="counter">
         <h5>ГВС</h5>
-        <span>202</span>
-        <span>date</span>
-        <span>sost</span>
-        <span>now</span>
+        <span class="archive">{{ hotArchive }}</span>
+        <span class="time">{{ hotTime }}</span>
+        <span class="status">{{ hotStatus }}</span>
+        <span>{{ hot }}</span>
         <input type="text" class="counterInput" name="counter2">
     </div>
     <div class="counter">
         <h5>ХВС2</h5>
-        <span>202</span>
-        <span>date</span>
-        <span>sost</span>
-        <span>now</span>
+        <span class="archive">{{ cold2Archive }}</span>
+        <span class="time">{{ cold2Time }}</span>
+        <span class="status">{{ cold2Status }}</span>
+        <span>{{ cold2 }}</span>
         <input type="text" class="counterInput" name="counter3">
     </div>
     <div class="counter">
         <h5>ГВС2</h5>
-        <span>202</span>
-        <span>date</span>
-        <span>sost</span>
-        <span>now</span>
+        <span class="archive">{{ hot2Archive }}</span>
+        <span class="time">{{ hot2Time }}</span>
+        <span class="status">{{ hot2Status }}</span>
+        <span>{{ hot2 }}</span>
         <input type="text" class="counterInput" name="counter4">
     </div>
     <div class="counter">
         <h5>Т1</h5>
-        <span>202</span>
-        <span>date</span>
-        <span>sost</span>
-        <span>now</span>
+        <span class="archive">{{ T1Archive }}</span>
+        <span class="time">{{ electroTime }}</span>
+        <span class="status">{{ electroStatus }}</span>
+        <span>{{ T1 }}</span>
         <input type="text" class="counterInput" name="counter5">
     </div>
     <div class="counter">
         <h5>Т2</h5>
-        <span>202</span>
-        <span>date</span>
-        <span>sost</span>
-        <span>now</span>
+        <span class="archive">{{ T2Archive }}</span>
+        <span class="time">{{ electroTime }}</span>
+        <span class="status">{{ electroStatus }}</span>
+        <span>{{ T2 }}</span>
         <input type="text" class="counterInput" name="counter6">
     </div>
 </div>
